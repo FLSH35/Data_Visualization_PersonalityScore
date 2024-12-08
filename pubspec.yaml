@@ -1,0 +1,9 @@
+name: pdf_certificate_updater
+description: A Dart script to update and merge PDFs with text overlays.
+version: 1.0.0
+
+environment:
+  sdk: ">=2.19.0 <3.0.0"
+
+dependencies:
+  pdf: ^3.6.6

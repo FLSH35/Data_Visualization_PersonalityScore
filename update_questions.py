@@ -53,7 +53,7 @@ def add_question_to_firestore(question):
 
 def main():
     # Read the CSV file with the specified encoding
-    df = pd.read_csv('PersonalityScoreFragen(Fragen) (17).csv', sep=';', encoding='latin1')
+    df = pd.read_csv('PersonalityScoreFragen(in) (6).csv', sep=',', encoding='latin1')
 
     # Iterate through the DataFrame and add each question to Firestore
     for _, row in df.iterrows():
@@ -63,6 +63,8 @@ def main():
             'value': row['value'],
             'relevancy': row['relevancy'],
             'set': row['set'],  # Include the set as a field
+            'backgroundInfo': row['backgroundInfo'],  # Include the set as a field
+            'id': row['id'],  # Include the set as a field
         }
 
         # Add the question to Firestore
